@@ -1,0 +1,38 @@
+*{ /* pour définir le style global du site*/
+margin: 0; /*marge exterieur de la boite*/
+padding: 0; /*marge interieur de la boite*/
+box-sizing: border-box; /* indique qu'on va inclure du padding et bordure dans la taille des parents*/
+}
+
+ul li{ 
+    list-style-type: none; /* pour qu'il n'y ai plus de point dans les listes / attention pcq c'est pour toutes les ul*/ 
+    padding: 5px; /* espace entre les listes*/
+}
+a{
+    text-decoration: none; /* td et entrée pour etre plus rapide / sert a enlever le souslignage / attention pcq c'est pour toutes les a*/
+}
+
+.displayHeader{ 
+    display: flex;  /* pour que toute la header soit alligné avec flexbox*/
+}
+.logoHeader{ /* c'est la class qu'on a mit dans le html pour l'image logo */
+    width: 125px;
+}
+.displayList{ 
+    display: flex; /* pour que les listes soient allignées avec flexbox*/
+    padding: 15px; /*pour du padding dans la boite de liste aka de l'espacement a l'interieur*/
+}
+
+/* pour la section avec les images livres passe miroir*/
+.livrePasse1{
+    width: 125px;
+    margin: 10px;
+}
+.livrePasse2{
+    width: 125px;
+    margin: 10px;
+}
+.displayBooks{
+    display: flex;
+    justify-content: space-around;
+}

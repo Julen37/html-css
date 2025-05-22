@@ -1,0 +1,42 @@
+<!DOCTYPE html> <!-- pour dire qu'on ecrit en html-->
+<html lang="fr"> <!-- permet de definir la langue utilisée-->
+<head>
+    <meta charset="UTF-8"> <!-- dit au navigateur qu'on utilise les caractere universel-->
+    <meta name="viewport" content="widthdevice-witdh, initial-scaled=1.0"> <!-- permet de donner les instructions d'echelle de taille aux navigateur-->
+    <link href="style.css" rel="stylesheet"> <!-- href pour lier son css au ficher html -->
+    <title>HTML et CSS - Premières leçons</title> <!-- titre de ce qu'il va s'afficher dans la barre de navigartion-->
+</head>
+<body>
+    <header> <!-- entete du site, ce qu'on voit en haut de la page-->
+        <div class="displayHeader"> <!-- div qui contient l'image et la liste / class pour qu'ils soient allignés-->
+            <div> <!-- pour faire plusieurs div d'un coup on met div*2 et on met le nombre de div qu'on veut genre div*15 ca en fait 15-->
+                <img class="logoHeader" src="image/logoimage.png" alt="Logo"> <!-- class pour le css / img et src pour mettre une image, on a mit le png dans le dossier "image" / alt est là pour l'accesibilité sur les images pour les personnes qui en ont besoin-->
+            </div>
+            <div> 
+                <nav> <!-- specifique a quand on a une section d'une page qui a des liens vers d'autres pages ou fragment de la page / pour naviguer-->
+                    <ul class="displayList"> <!-- liste non ordonnée (avec les points normalement) / class est là pour alligner-->
+                        <li><a href="#">Accueil</a></li> <!-- ligne de la liste / a href c'est un lien, ici vers un autre endroit d'une page, # c'est la meme page-->
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Produits</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main> <!-- pour marquer l'endroit principal-->
+        <section> <!-- le header ne prend pas section / chaque region de ton site va etre rangé dans des sections-->
+                <div class="displayBooks">
+                    <div>
+                        <img class="livrePasse1" src="image/passe miroir.jpg" alt="livre 1 la passe miroir de christelle dabos"> 
+                        <p> Livre 1</p>
+                    </div>
+                    <div >
+                        <img class="livrePasse2" src="image/passe miroir 2.jpg" alt="livre 2 la passe miroir de christelle dabos">
+                        <p> Livre 2</p>
+                    </div>
+                </div>
+        </section>
+    </main>
+</body>
+</html>
