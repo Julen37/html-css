@@ -36,10 +36,18 @@ a{
     display: flex;
     justify-content: space-around;
 }
-
+.textDabos{
+    text-align: center;
+}
 
 /*tableau*/
 table, th, td{
     border: 1px solid black;
     border-collapse: collapse;
+}
+.tableau{
+    text-align: center;
+}
+.colorFieldset{
+    background-color: aquamarine;
 }

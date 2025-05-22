@@ -37,27 +37,27 @@
                 <div class="displayBooks">
                     <div>
                         <img class="livrePasse1" src="image/passe miroir.jpg" alt="livre 1 la passe miroir de christelle dabos"> 
-                        <p> Livre 1</p>
+                        <p class="textDabos"> Livre 1</p>
                     </div>
                     <div >
                         <img class="livrePasse2" src="image/passe miroir 2.jpg" alt="livre 2 la passe miroir de christelle dabos">
-                        <p> Livre 2</p>
+                        <p class="textDabos"> Livre 2</p>
                     </div>
                 </div>
         </section>
         <section> <!-- tableau-->
-            <table>
+            <table >
                 <tr>
                     <th>Titre</th>
                     <th>Auteur</th>
                     <th>Date</th>
                 </tr>
-                <tr>
+                <tr class="tableau">
                     <td>La Passe Miroir</td>
                     <td>Christelle Dabos</td>
                     <td>2013-2019</td>
                 </tr>
-                <tr>
+                <tr class="tableau">
                     <td>They both die at the end</td>
                     <td>Adam Silvera</td>
                     <td>2017</td>
@@ -65,7 +65,50 @@
             </table>
         </section>
         <section> <!-- formulaire-->
-            
+            <form method="get" action="">
+                <p>
+                    <label for="prénom">Votre prénom :</label>
+                    <input type="text" name="prenom" id="prenom" placeholder="Votre prénom" size="30" maxlength="20">
+                </p>
+                <p> <!--Checkbox = on peut choisir plusieurs-->
+                    Cochez les aliments que vous préféré : <br> <!--br c'est pour sauter une ligne-->
+                    <input type="checkbox" name="frites" id="frites"> 
+                    <label for="frites">Frites</label><br>
+                    <input type="checkbox" name="steak" id="steak"> 
+                    <label for="steak">Steak</label><br>
+                </p>
+                <p> <!--Radio= question a un choix-->
+                    Veuillez indiquer la tranche d'âge dans laquelle vous vous situez :<br>
+                    <input type="radio" name="age"  value="moins15" id="moins15">
+                    <label for="moins15">Moins de 15ans</label><br>
+                    <input type="radio" name="age" value="medium15-25" id="medium15-25">
+                    <label for="medium15-25">15-25 ans</label><br>
+                    <input type="radio" name="age" value="medium25-40" id="medium25-40">
+                    <label for="medium25-40">25-40 ans</label><br>
+                    <input type="radio" name="age" value="plus40" id="plus40">
+                    <label for="plus40">Plus de 40 ans</label>
+                </p>
+            </form>
+            <form method="get" action="">
+                <p> <!-- menu déroulant-->
+                    <label for="pays">De quel pays venez vous?</label>
+                    <select name="pays" id="pays">
+                        <option value="france">France</option>
+                        <option value="senegal">Sénégal</option>
+                    </select>
+                </p>
+                <fieldset class="colorFieldset">
+                    <legend>Vos coordonnées</legend> <!--titre du fieldset-->
+                    <label for="nom">Quel est votre nom ?</label>
+                    <input type="text" name="nom" id="nom">
+                    <label for="prenom">Quel est votre prénom ?</label>
+                    <input type="text" name="prenom" id="prenom" required> <!-- required= rend le champ obligatoire-->
+                    <label for="email">Quel est votre e-mail ?</label>
+                    <input type="email" name="email" id="email">
+                </fieldset>
+                <p>waw le formulaire</p>
+                <input type="submit" value="Envoyer mon formulaire">
+            </form>
         </section>
     </main>
 </body>
