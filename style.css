@@ -36,3 +36,10 @@ a{
     display: flex;
     justify-content: space-around;
 }
+
+
+/*tableau*/
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
