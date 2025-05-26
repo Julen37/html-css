@@ -52,6 +52,7 @@ table, th, td{
     background-color: aquamarine;
 }
 
+
 /* ----------------------------------------------------MENU BURGER-------------------------------------------------------*/
 #menuToggle
 {
@@ -167,3 +168,16 @@ table, th, td{
     opacity: 1;
 }
 /* --------------------------------------------FIN MENU BURGER----------------------------------------*/
+
+.navBurger{ /*pour configurer la disparition du menu burger*/
+    display: none;
+}
+
+@media screen and (max-width:800px){
+    .displayHeader{
+        display: none;
+    }
+    .navBurger{
+        display: block;
+    }
+}
