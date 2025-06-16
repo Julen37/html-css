@@ -134,6 +134,51 @@
                 <input type="submit" value="Envoyer mon formulaire">
             </form>
         </section>
+
+    <!-- -------------------------------------------------------JAVASCRIPT------------------------------- -->
+
+    <!--<section> 
+            <script> // javascript 
+                alert("Bonjour !") // affiche un message a l'utilisateur
+                let sonPrenom = prompt("Quel est ton prénom ?") // demande a l'utilisateur d'ecrire
+                alert("Bonjour " + sonPrenom + " ! :-)") // concaténation /!\ aux espaces pour que ca s'ecrive bien
+            </script>
+        </section> -->
+
+      <!--  <section> 
+            <script> //exo 4 chatbot bete mais poli
+                let bonjour = prompt("Dis moi quelque chose (Bonjour ou tu vas bien ?)")
+                if (bonjour.toLowerCase() === "bonjour") { //tolowercase pour tout mettre en minuscule pour accepter et les majuscule et les minuscule en reponse
+                    alert("Bonjour à toi !");
+                } else if (bonjour === "Tu vas bien ?") {
+                    alert("Bien, et toi ?");
+                } else {
+                    alert("Désolé, je n'ai pas compris...");
+                }
+            </script>
+        </section> -->
+
+        <section>
+            <script> //exo 4 chatbot poli mais pas sympa
+                let bonjour = prompt("Dis moi quelque chose (Bonjour)")
+                if (bonjour.toLowerCase() === "bonjour" ) {
+                    let cava = prompt("Bonjour ! Ca va ?");
+                        if (cava.toLowerCase() === "oui"){
+                            alert("Je suis content pour toi.");
+                        } else {
+                            alert("Désolé, je n'ai pas compris...");
+                        }
+                } else {
+                    alert("Désolé, je n'ai pas compris...");
+                }
+            </script>
+        </section>
+
+        <section>
+            <script> //exo 4 votre propre bot-chat
+
+            </script>
+        </section>
     </main>
 </body>
 </html>
