@@ -158,7 +158,7 @@
             </script>
         </section> -->
 
-        <section>
+      <!--  <section>
             <script> //exo 4 chatbot poli mais pas sympa
                 let bonjour = prompt("Dis moi quelque chose (Bonjour)")
                 if (bonjour.toLowerCase() === "bonjour" ) {
@@ -172,11 +172,73 @@
                     alert("Désolé, je n'ai pas compris...");
                 }
             </script>
-        </section>
+        </section> -->
 
         <section>
             <script> //exo 4 votre propre bot-chat
-
+                const dormirPasBien = ("J'espère que tu dormiras mieux la prochaine fois. Tu as cauchemardé ?");
+                const dormirBien = ("Oh génial ! tu as révé ? (Oui ou Non)");
+                let bonjour = prompt("Dis moi quelque chose (Bonjour)");
+                if (bonjour.toLowerCase() === "bonjour" ) {
+                    let cava = prompt("Bonjour ! Ca va ? (Oui ou Non)");
+                        if (cava.toLowerCase() === "oui"){
+                            let cavaOui = prompt("Je suis content pour toi. Tu as bien dormi ? (Oui ou Non)");
+                                if (cavaOui.toLowerCase() === "oui"){
+                                    let dormirBien = prompt("Oh génial ! tu as révé ? (Oui ou Non)");
+                                        if (dormirBien.toLowerCase() === "oui"){
+                                            let reveOui = prompt("Ca devait être bien, j'aimerai rêver moi aussi ! En tout cas j'espère que ta journée va bien se passer ! Bonne journée à toi et à bientôt ! (Au revoir)");
+                                                if (reveOui.toLowerCase() === "au revoir"){
+                                                    alert(":-)");
+                                                } else {
+                                                    alert("Désolé, je n'ai pas compris...");
+                                                }
+                                        } else if(dormirBien.toLowerCase() === "non") {
+                                            let reveNon = prompt("Dommage ! J'aimerai bien rêver.. En tout cas j'espère que ta journée va bien se passer ! Bonne journée à toi et à bientôt ! (Au revoir)")
+                                                if (reveNon.toLowerCase() === "au revoir"){
+                                                    alert(":-)");
+                                                } else {
+                                                    alert("Désolé, je n'ai pas compris...");
+                                                }
+                                        } else {
+                                            alert("Désolé, je n'ai pas compris...");
+                                        }
+                                } else if (cavaOui.toLowerCase() === "non"){
+                                    let dormirPasBien = prompt("J'espère que tu dormiras mieux la prochaine fois. Tu as cauchemardé ? (oui ou non)");
+                                        if (dormirPasBien.toLowerCase() === "oui"){
+                                            let cauchemardOui = prompt("Oh mince.. J'espère que le cauchemar ne va pas te peser dans la journée. En tout cas j'espère que ta journée va bien se passer malgré ça ! Bonne journée à toi et à bientôt ! (Au revoir)")
+                                                if (cauchemardOui.toLowerCase() === "au revoir"){
+                                                    alert(":-)");
+                                                } else {
+                                                    alert("Désolé, je n'ai pas compris...");
+                                                }
+                                        } else if (dormirPasBien.toLowerCase() === "non"){
+                                            let cauchemarNon = prompt("Tant mieux ! En tout cas j'espère que ta journée va bien se passer ! Bonne journée à toi et à bientôt ! (Au revoir)")
+                                                if (cauchemardNon.toLowerCase() === "au revoir"){
+                                                    alert(":-)");
+                                                } else {
+                                                    alert("Désolé, je n'ai pas compris...");
+                                                }
+                                        }else {
+                                            alert("Désolé, je n'ai pas compris...");
+                                        }
+                                } else {
+                                    alert("Désolé, je n'ai pas compris...");
+                                }
+                        } else if (cava.toLowerCase() === "non"){
+                            let cavaNon = prompt ("Je suis désolé pour toi. Tu as mal dormi ?");
+                                if (cavaNon.toLowerCase() === "oui"){
+                                    prompt(dormirPasBien); // je veux renvoyer l'utilisateur au dormirPasBien qui est dans le elseif dans cavaoui reponse non, pour que ca reprenne la suite de ce qui est dit et des if..
+                                } else if (cavaNon.toLowerCase() === "non") {
+                                    prompt(dormirBien);
+                                } else {
+                                    alert("Désolé, je n'ai pas compris...");
+                                }
+                        } else {
+                            alert("Désolé, je n'ai pas compris...");
+                        }
+                } else {
+                    alert("Désolé, je n'ai pas compris...");
+                }
             </script>
         </section>
     </main>
