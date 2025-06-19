@@ -266,31 +266,52 @@
             </script>
         </section>
         <section> <!-- exo 5 functions-->
-            <script>
+            <script> //div par 2
                 function diviserParDeux(nombre){
                     return nombre / 2;
                 }
                 console.log(diviserParDeux(45))
             </script>
-            <script> // div nombre random a refaire
+            <script> // div nombre random par 2
                 function diviserParDeux(nombre){
-                    let n = math.random()
                     return nombre / 2;
                 }
-                console.log(diviserParDeux(n))
+                console.log(diviserParDeux(Math.random())) // bien mettre la majuscule a math sinon ca fonctionne pas
             </script>
 
-            <script> // faire avec nombre random aussi
+            <script> // 2parametres
                 function somme(nombre, nombre2){
                     return nombre + nombre2;
                 }
                 console.log(somme(45, 15))
             </script>
-            <script>   
-                function signe(nombre){
-                    return typeof nombre
+            <script> // avec nombre random 
+                function somme(nombre, nombre2){
+                    return nombre + nombre2;
                 }
-                console.log(-1)
+                console.log(somme(Math.random(), 1))
+            </script>
+
+            <script> // retourne si c'est positif, negatif ou null
+                function signe(nombre){
+                    if (nombre === 0){
+                        console.log("null");
+                    } else if (nombre < 0){
+                        console.log("negative");
+                    } else {
+                        console.log("positive");
+                    }
+                    return nombre;
+                }
+                console.log(signe(Math.random()))
+            </script>
+
+            <script> // retourne le produit de tous les entiers consécutifs entre 1 et l’entier passé en paramètre (compris)
+                function factorielle(nombre){
+
+                    return nombre
+                }
+                console.log(0)
             </script>
         </section>
     <!-- ------------------------------------------------FIN JAVASCRIPT------------------------------- -->
