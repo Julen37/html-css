@@ -136,7 +136,7 @@
         </section>
 
     <!-- -------------------------------------------------------JAVASCRIPT------------------------------- -->
-
+        
         <section> 
             <!-- <script> // javascript 
                 alert("Bonjour !") // affiche un message a l'utilisateur
@@ -148,7 +148,7 @@
         <section> <!-- exo 4 if else else if -->
       <!--  <section> 
                 <script> //exo 4 chatbot bete mais poli
-                    let bonjour = prompt("Dis moi quelque chose (Bonjour ou tu vas bien ?)")
+                    let bonjour = prompt("Dis moi quelque chose (Bonjour ou tu vas bien ?)");
                     if (bonjour.toLowerCase() === "bonjour") { //tolowercase pour tout mettre en minuscule pour accepter et les majuscule et les minuscule en reponse
                         alert("Bonjour à toi !");
                     } else if (bonjour === "Tu vas bien ?") {
@@ -248,13 +248,13 @@
                 for (var monNombre = 1; monNombre < 199; monNombre++)
 
                 if (monNombre % 3 === 0 && monNombre % 5 === 0){
-                    console.log("FizzBuzz")
+                    console.log("FizzBuzz");
                 } else if (monNombre % 3 === 0){
-                    console.log("Fizz")
+                    console.log("Fizz");
                 } else if (monNombre % 5 === 0){
-                    console.log("Buzz")
+                    console.log("Buzz");
                 }else {
-                    console.log(monNombre)
+                    console.log(monNombre);
                 }
         
                            // cf cours pour le ternaire (ligne326 code jeremie)
@@ -270,26 +270,26 @@
                 function diviserParDeux(nombre){
                     return nombre / 2;
                 }
-                console.log(diviserParDeux(45))
+                console.log(diviserParDeux(45));
             </script>
             <script> // div nombre random par 2
                 function diviserParDeux(nombre){
                     return nombre / 2;
                 }
-                console.log(diviserParDeux(Math.random())) // bien mettre la majuscule a math sinon ca fonctionne pas
+                console.log(diviserParDeux(Math.random())); // bien mettre la majuscule a math sinon ca fonctionne pas
             </script>
 
-            <script> // 2parametres
+            <script> // 2parametres aditionné
                 function somme(nombre, nombre2){
                     return nombre + nombre2;
                 }
-                console.log(somme(45, 15))
+                console.log(somme(45, 15));
             </script>
             <script> // avec nombre random 
                 function somme(nombre, nombre2){
                     return nombre + nombre2;
                 }
-                console.log(somme(Math.random(), 1))
+                console.log(somme(Math.random(), 1));
             </script>
 
             <script> // retourne si c'est positif, negatif ou null
@@ -303,15 +303,18 @@
                     }
                     return nombre;
                 }
-                console.log(signe(Math.random()))
+                console.log(signe(Math.random()));
             </script>
 
-            <script> // retourne le produit de tous les entiers consécutifs entre 1 et l’entier passé en paramètre (compris)
+            <script> // retourne le produit de tous les entiers consécutifs entre 1 et l’entier passé en paramètre compris
                 function factorielle(nombre){
-
-                    return nombre
+                    let produit = 1; // on le met a 1 et pas 0 pour pas que ca fasse 0*nombre=0
+                    for (nombre = 1; nombre <= produit; nombre++){ // tant que le produit est plus petit ou egal au produit on l'incrémente
+                        produit *= nombre; // on multiplie produit et nombre et affecte le resultat a produit jusqu'a ce que la condition soit remplie // on peut faire aussi produit=produit*nombre;
+                    }
+                    return produit;
                 }
-                console.log(0)
+                console.log(0);
             </script>
         </section>
     <!-- ------------------------------------------------FIN JAVASCRIPT------------------------------- -->
