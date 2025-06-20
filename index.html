@@ -137,7 +137,7 @@
 
     <!-- -------------------------------------------------------JAVASCRIPT------------------------------- -->
         
-        <section> 
+        <section> <!-- alert et prompt-->
             <!-- <script> // javascript 
                 alert("Bonjour !") // affiche un message a l'utilisateur
                 let sonPrenom = prompt("Quel est ton prénom ?") // demande a l'utilisateur d'ecrire
@@ -262,10 +262,29 @@
             </script> -->
 
             <script> //jeu deviner le nombre
-                
+                function guessingGame(){
+                    const answer = Math.floor(Math.random()*101);
+                    console.log("Le nombre secret est :", answer);
+                    for (let tentative=0; tentative < 11; tentative++){
+                        let number = prompt("devine entre 0 et 100, tu es a " + tentative + " tentative sur 10");
+                            if (number == answer){
+                                alert("You win !");
+                                return;
+                            } else if (number < answer){
+                                alert("Plus grand");
+                            } else if (number > answer){
+                                alert("Plus petit");
+                            } else if (tentative == 10){
+                                alert("Tu as perdu ! C'était " + answer);
+                                return;
+                            }  
+                    }
+                    
+                }
+                guessingGame();
             </script>
         </section>
-        <section> <!-- exo 5 functions-->
+        <!-- <section>  exo 5 functions
             <script> //div par 2
                 function diviserParDeux(nombre){
                     return nombre / 2;
@@ -316,7 +335,7 @@
                 }
                 console.log(0);
             </script>
-        </section>
+        </section> -->
     <!-- ------------------------------------------------FIN JAVASCRIPT------------------------------- -->
 
     </main>
