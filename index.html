@@ -265,7 +265,7 @@
                 function guessingGame(){
                     const answer = Math.floor(Math.random()*101);
                     console.log("Le nombre secret est :", answer);
-                    for (let tentative=0; tentative < 11; tentative++){
+                    for (let tentative=0; tentative < 10; tentative++){
                         let number = prompt("devine entre 0 et 100, tu es a " + tentative + " tentative sur 10");
                             if (number == answer){
                                 alert("You win !");
@@ -274,12 +274,9 @@
                                 alert("Plus grand");
                             } else if (number > answer){
                                 alert("Plus petit");
-                            } else if (tentative == 10){
-                                alert("Tu as perdu ! C'était " + answer);
-                                return;
-                            }  
+                            } 
                     }
-                    
+                    alert("Tu as perdu ! C'était " + answer);        
                 }
                 guessingGame();
             </script>
