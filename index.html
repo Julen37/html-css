@@ -333,7 +333,55 @@
                 console.log(0);
             </script>
         </section> -->
+        <section>
+            <script> // exo 6 chifoumi
+                function chifoumi(computerChoice, userChoice){
+                    if (computerChoice === userChoice){
+                        return "égalité"
+                    }
+                    switch (computerChoice){ // exemple switch case
+                        case "ciseaux":
+                            return userChoice === "feuille" ? "l'ordinateur gagne" : "le joueur gagne"; //ternaire: si userchoice === feuille alors l'ordi gagne car il a mit ciseau sinon c'est le joueur qui gagne
+                        case  "pierre":
+                            return userChoice === "ciseaux" ? "l'ordinateur gagne" : "le joueur gagne";
+                        case  "feuille":
+                            return userChoice === "pierre" ? "l'ordinateur gagne" : "le joueur gagne";
+                        default:
+                            throw new Error("Choix invalide.");
+                    }
+                
+                }
 
+                function game(){
+                    let computerScore = 0;
+                    let userScore = 0;
+
+                    for (let i=0; i<3; i++){
+                        let computerAnswer = Math.random() < 0.33 ? "ciseaux" : Math.random() < 0.60 ? "pierre" : "feuille"; // la réponse de l'ordinateur est random, vu qu'il y a 3choix on met 3 conditions : si le random est <0.33 alors il a choisi ciseau, si le random est <0.60 alors il a choisi pierre, sinon feuille
+                        console.log("choix de l'ordi : " + computerAnswer)
+                        let userAnswer = prompt("Choisissez : pierre, feuille, ciseaux ?");
+                        let result = chifoumi(computerAnswer, userAnswer);
+                        alert("Le choix de l'ordinateur est " + computerAnswer + ". Vous avez choisi " + userAnswer +". Résultat : " + result);
+
+                        if (result === "l'ordinateur gagne"){
+                            computerScore++;
+                        } else if (result === "le joueur gagne") {
+                            userScore++;
+                        }
+
+                    }
+                    if (userScore === computerScore){
+                        alert("Egalité des scores : "+ computerScore +"-"+ userScore);
+                    } else if (userScore < computerScore){
+                        alert("L'ordinateur a gagné : "+ computerScore +"-"+ userScore);
+                    } else if (userScore > computerScore){
+                        alert("Le joueur a gagné : "+ userScore +"-"+ computerScore);
+                    }
+                }
+                game()
+
+            </script>
+        </section>
         
     <!-- ------------------------------------------------FIN JAVASCRIPT------------------------------- -->
 
