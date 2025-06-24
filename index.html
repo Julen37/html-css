@@ -412,13 +412,14 @@
                 }
             </script> -->
 
-            <script> // exo 7 jeu du pendu
+            <!-- <script> // exo 7 jeu du pendu
                 var mauvaisesLettres = [ ]; // sera complété pendant le jeu
                 var lettresAttendues = ["s","u","p","e","r"]; // se fera supprimer quand trouvé
                 var lettresTrouvees = []; // sera complété quand lettre trouvé
                                         
                 while (mauvaisesLettres.length < 10 ){
                     let reponse = prompt("Devine le mot en me donnant une lettre, il y a " + lettresAttendues.length + " lettre(s) a trouver. \nLettres déjà trouvée(s) : " + lettresTrouvees + "\nTentatives restantes : " + (10 - mauvaisesLettres.length)).toLowerCase();
+                    // on peut au lieu d'utiliser "" utiliser les backtick `` (touche 7 du clavier) avec pour appeler les variables $() à l'interieur sans couper a chaque fois
                     if (lettresAttendues.indexOf(reponse) !== -1){
                         alert("Vous avez trouvé la lettre " + reponse);
                         lettresTrouvees += reponse;
@@ -430,22 +431,18 @@
                     }
 
                     if (mauvaisesLettres.length === 10){
-                        alert("Perdu ! Le mot était : " + lettresAttendues + lettresTrouvees);
+                        alert("Perdu ! Le mot était : " + lettresAttendues.join("") + lettresTrouvees);
                         break; // pour arreter la boucle while sinon ca continu jusqua ce que ca aille a 10 mauvaises reponses
                     }//else if (lettresTrouvees.length === lettresAttendues.length){
                     //     alert("Gagné ! Le mot était : " + lettresAttendues);
                     //     break;}
                     else if (lettresAttendues.length === 0){
-                        alert("Gagné ! Le mot était : " + lettresTrouvees); //pas dans l'ordre
+                        alert("Gagné ! Le mot était : " + lettresTrouvees); //pas dans l'ordre attention
                         break;
                     }
                 }
-
-
-                // for (mauvaisesLettres.length = 0; mauvaisesLettres.length < 10; mauvaisesLettres.length++){} // boucle for pareil que le while
-                
-                
-            </script>
+                // for (mauvaisesLettres.length = 0; mauvaisesLettres.length < 10 && lettresAttendues.length > 0; mauvaisesLettres.length++){} // boucle for pareil que le while              
+            </script> -->
         </section>
         
     <!-- ------------------------------------------------FIN JAVASCRIPT------------------------------- -->
