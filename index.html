@@ -418,17 +418,32 @@
                 var lettresTrouvees = []; // sera complété quand lettre trouvé
                                         
                 while (mauvaisesLettres.length < 10 ){
-                    let reponse = prompt("devine le mot en me donnant une lettre, il y a " + lettresAttendues.length + " lettre(s) a trouver. Lettres déjà trouvées : " + lettresTrouvees + ". Tentatives restantes : " + (10 - mauvaisesLettres.length)).toLowerCase();
+                    let reponse = prompt("Devine le mot en me donnant une lettre, il y a " + lettresAttendues.length + " lettre(s) a trouver. \nLettres déjà trouvée(s) : " + lettresTrouvees + "\nTentatives restantes : " + (10 - mauvaisesLettres.length)).toLowerCase();
                     if (lettresAttendues.indexOf(reponse) !== -1){
                         alert("Vous avez trouvé la lettre " + reponse);
-                        lettresTrouvees.push(lettresAttendues.indexOf(reponse));
-                        console.log(lettresTrouvees);
+                        lettresTrouvees += reponse;
+                        lettresAttendues.splice(lettresAttendues.indexOf(reponse), 1); // si je le met ca me casse le code pour si on gagne ou perd a la fin pcq javais mit meme length
                     }else{
-                        alert("Mauvaise lettre")
+                        alert("Mauvaise lettre");
                         mauvaisesLettres.push(reponse);
-                        console.log(mauvaisesLettres);
+                        alert("Lettres déjà testé(s) : " + mauvaisesLettres);
+                    }
+
+                    if (mauvaisesLettres.length === 10){
+                        alert("Perdu ! Le mot était : " + lettresAttendues + lettresTrouvees);
+                        break; // pour arreter la boucle while sinon ca continu jusqua ce que ca aille a 10 mauvaises reponses
+                    }//else if (lettresTrouvees.length === lettresAttendues.length){
+                    //     alert("Gagné ! Le mot était : " + lettresAttendues);
+                    //     break;}
+                    else if (lettresAttendues.length === 0){
+                        alert("Gagné ! Le mot était : " + lettresTrouvees); //pas dans l'ordre
+                        break;
                     }
                 }
+
+
+                // for (mauvaisesLettres.length = 0; mauvaisesLettres.length < 10; mauvaisesLettres.length++){} // boucle for pareil que le while
+                
                 
             </script>
         </section>
