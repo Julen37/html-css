@@ -445,7 +445,7 @@
             </script> -->
         </section>
         <section>
-            <script> // exo 8 annuaire téléphonique
+            <!-- <script> // exo 8 annuaire téléphonique avec if
                 var annuaire ={
                     patricia : "06 66 66 66 66",
                     david : "07 77 77 77 77",
@@ -457,6 +457,49 @@
                 } else if (demande === "david"){ 
                 alert(annuaire.david)
                 }
+            </script> -->
+
+            <!-- <script> // exo 8 annuaire téléphonique sans if
+                var annuaire ={
+                    patricia : "06 66 66 66 66",
+                    david : "07 77 77 77 77",
+                };
+                var demande = prompt("Saisissez un prenom entre patricia et david");
+                alert( "Voici le numéro de " + demande + " : " + annuaire[demande]);
+            </script> -->
+            
+            <script> // exo 8 repertoire telephonique
+                var annuaire ={
+                    patricia : "06 66 66 66 66",
+                    david : "07 77 77 77 77",
+                };
+                while (debut !== "q"){
+                    var debut = prompt("Saisissez r pour rechercher\nSaisissez l pour afficher la liste\nSaisissez a pour ajouter\nSaisissez s pour supprimer\nSaisissez q pour quitter");
+                    switch(debut){
+                        case "r":
+                            var demande = prompt("Recherchez un prenom (patricia ou david)");
+                            if (annuaire[demande]){
+                                alert("Voici le numéro de téléphone de " + demande + " : " + annuaire[demande]);
+                            }else{
+                                alert("Saisie inconnue");
+                            };
+                            break;
+                        case "l":
+                            for(nom in annuaire){
+                                alert(nom + " : " + annuaire[nom]);
+                            }
+                            break;
+                        case "a":
+                
+                        case "s":
+
+                        case "q":
+                            break;
+                        default:
+                            alert("Saisie inconnue");
+                    }
+                }
+
             </script>
         </section>
         
