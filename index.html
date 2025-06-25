@@ -419,7 +419,7 @@
                                         
                 while (mauvaisesLettres.length < 10 ){
                     let reponse = prompt("Devine le mot en me donnant une lettre, il y a " + lettresAttendues.length + " lettre(s) a trouver. \nLettres déjà trouvée(s) : " + lettresTrouvees + "\nTentatives restantes : " + (10 - mauvaisesLettres.length)).toLowerCase();
-                    // on peut au lieu d'utiliser "" utiliser les backtick `` (touche 7 du clavier) avec pour appeler les variables $() à l'interieur sans couper a chaque fois
+                    // on peut au lieu d'utiliser "" utiliser les backtick `` (touche 7 du clavier) avec pour appeler les variables ${} à l'interieur sans couper a chaque fois
                     if (lettresAttendues.indexOf(reponse) !== -1){
                         alert("Vous avez trouvé la lettre " + reponse);
                         lettresTrouvees += reponse;
@@ -474,25 +474,44 @@
                     david : "07 77 77 77 77",
                 };
                 while (debut !== "q"){
-                    var debut = prompt("Saisissez r pour rechercher\nSaisissez l pour afficher la liste\nSaisissez a pour ajouter\nSaisissez s pour supprimer\nSaisissez q pour quitter");
+                    var debut = prompt("Saisissez R pour rechercher\nSaisissez L pour afficher la liste\nSaisissez A pour ajouter\nSaisissez S pour supprimer\nSaisissez Q pour quitter").toLowerCase();
                     switch(debut){
                         case "r":
-                            var demande = prompt("Recherchez un prenom (patricia ou david)");
+                            var demande = prompt("Recherchez un prenom (patricia ou david)").toLowerCase();
                             if (annuaire[demande]){
-                                alert("Voici le numéro de téléphone de " + demande + " : " + annuaire[demande]);
+                                alert(`Voici le numéro de téléphone de ${demande} : ${annuaire[demande]}`);
                             }else{
                                 alert("Saisie inconnue");
                             };
                             break;
-                        case "l":
+                        case "l": 
                             for(nom in annuaire){
                                 alert(nom + " : " + annuaire[nom]);
                             }
                             break;
-                        case "a":
-                
-                        case "s":
+                        case "a": // a faire
+                            console.log(annuaire); 
+                            var addName = prompt("Veuillez saisir le nom de la personne a rajouter :").toLowerCase();
+                            var addTel = prompt(`Veuillez saisir le numéro de ${addName} :`);
+                            annuaire[addName] = addTel;
+                            // annuaire.push(addName);
 
+                            // annuaire.create(addName);
+                            // annuaire.addName = addTel;  
+                            alert(`${addName} a bien été ajouté aux contact`);
+                            console.log(annuaire);                 
+                            break;
+                        case "s": 
+                            console.log(annuaire);
+                            var deleteContact = prompt("Veuillez saisir le nom du contact a supprimer :").toLowerCase();                            
+                            if (annuaire[deleteContact]){
+                                delete annuaire[deleteContact];
+                                alert(deleteContact + " a bien été supprimé");
+                            } else {
+                                alert("Contact introuvable")
+                            }
+                            console.log(annuaire);
+                            break;
                         case "q":
                             break;
                         default:
