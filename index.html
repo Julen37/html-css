@@ -485,19 +485,17 @@
                             };
                             break;
                         case "l": 
+                            let liste = "Liste des conatacts : \n"
                             for(nom in annuaire){
-                                alert(nom + " : " + annuaire[nom]);
+                                liste += nom + " : " + annuaire[nom] + "\n";
                             }
+                            alert(liste);
                             break;
-                        case "a": // a faire
+                        case "a": 
                             console.log(annuaire); 
                             var addName = prompt("Veuillez saisir le nom de la personne a rajouter :").toLowerCase();
                             var addTel = prompt(`Veuillez saisir le numéro de ${addName} :`);
-                            annuaire[addName] = addTel;
-                            // annuaire.push(addName);
-
-                            // annuaire.create(addName);
-                            // annuaire.addName = addTel;  
+                            annuaire[addName] = addTel; 
                             alert(`${addName} a bien été ajouté aux contact`);
                             console.log(annuaire);                 
                             break;
@@ -513,6 +511,7 @@
                             console.log(annuaire);
                             break;
                         case "q":
+                            alert("Vous quittez le répertoire téléphonique");
                             break;
                         default:
                             alert("Saisie inconnue");
