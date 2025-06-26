@@ -481,13 +481,13 @@
                             if (annuaire[demande]){
                                 alert(`Voici le numéro de téléphone de ${demande} : ${annuaire[demande]}`);
                             }else{
-                                alert("Saisie inconnue");
+                                alert("Contact inconnu");
                             };
                             break;
                         case "l": 
-                            let liste = "Liste des conatacts : \n"
+                            let liste = "Liste des contacts : \n"; // pour que la liste s'affiche dans un seul bloc et pas un par un
                             for(nom in annuaire){
-                                liste += nom + " : " + annuaire[nom] + "\n";
+                                liste += nom + " : " + annuaire[nom] + "\n"; 
                             }
                             alert(liste);
                             break;
@@ -506,7 +506,7 @@
                                 delete annuaire[deleteContact];
                                 alert(deleteContact + " a bien été supprimé");
                             } else {
-                                alert("Contact introuvable")
+                                alert("Contact introuvable");
                             }
                             console.log(annuaire);
                             break;
